@@ -282,7 +282,7 @@ function App() {
           {visibleCategories.map((category) => {
             const Icon = category.icon;
             return <section className="menu-section" key={category.id}>
-              <div className="section-heading"><div className="section-title"><span className="section-icon"><Icon size={20} /></span><h2>{category.label[currentLanguage]}</h2></div><span className="section-line" /></div>
+              <div className="section-heading"><div className="section-title"><span className="section-icon"><Icon size={20} /></span><h2>{category.label[currentLanguage]}</h2></div><span className="section-ornament" /><span className="section-line" /></div>
               <div className="items-grid">
                 {category.items.map((menuItem) => <article className="menu-item" key={menuItem.name.en}><div className="item-image-wrap" onClick={() => setLightbox({ src: menuItem.image, alt: menuItem.name[currentLanguage] })}><img className="item-image" src={menuItem.image} alt={menuItem.name[currentLanguage]} loading="lazy" /><LogoBadge style={menuItem.logo} /></div><div className="item-copy"><h3>{menuItem.name[currentLanguage]}</h3><p>{menuItem.description[currentLanguage]}</p></div><div className="price"><strong>{menuItem.price}</strong><span>IQD</span></div></article>)}
               </div>
